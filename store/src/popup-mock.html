@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <!-- Copia estática del popup con datos de ejemplo, solo para las capturas de la tienda -->
+  <link rel="stylesheet" href="../../popup.css">
+  <style>body { overflow: hidden; }</style>
+</head>
+<body>
+  <h1>🎂 Cumpleaños</h1>
+  <form autocomplete="off">
+    <label>Nombre <input type="text" value="Lucía"></label>
+    <div class="row">
+      <label>Día <input type="number" value="24"></label>
+      <label class="grow">Mes <select><option>Diciembre</option></select></label>
+      <label>Año <span class="muted">(opc.)</span> <input type="number" value="1998"></label>
+    </div>
+    <fieldset>
+      <legend>Avisarme</legend>
+      <label class="check"><input type="checkbox" checked> El mismo día (00:00)</label>
+      <label class="check"><input type="checkbox" checked> Un día antes (9:00)</label>
+      <label class="check"><input type="checkbox" checked> Una semana antes (9:00)</label>
+      <label class="check"><input type="checkbox"> También por email (el día anterior)</label>
+    </fieldset>
+    <button type="button">Agregar a Google Calendar</button>
+    <p id="status" class="ok">Listo: cumpleaños de Martín agregado ✔</p>
+  </form>
+  <section>
+    <h2>Próximos</h2>
+    <ul>
+      <li><div class="info"><div class="who">Juli</div><div class="when">18 de noviembre · Mañana · cumple 25</div></div><button class="del">✕</button></li>
+      <li><div class="info"><div class="who">Martín</div><div class="when">2 de diciembre · En 15 días · cumple 31</div></div><button class="del">✕</button></li>
+      <li><div class="info"><div class="who">Abuela Rosa</div><div class="when">24 de diciembre · En 37 días · cumple 80</div></div><button class="del">✕</button></li>
+      <li><div class="info"><div class="who">Sofi</div><div class="when">9 de enero · En 53 días</div></div><button class="del">✕</button></li>
+    </ul>
+  </section>
+</body>
+</html>

@@ -98,7 +98,7 @@ async function createBirthday({ name, day, month, year, reminders, email }) {
   const description = [
     `Cumpleaños de ${name}.`,
     year ? `Nació el ${day}/${month}/${year}.` : null,
-    'Creado con la extensión "Cumpleaños → Google Calendar".',
+    'Creado con la extensión "Cumpleaños para Google Calendar".',
   ].filter(Boolean).join('\n');
 
   return api('', {

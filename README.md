@@ -1,4 +1,4 @@
-# Cumpleaños → Google Calendar
+# Cumpleaños para Google Calendar
 
 Extensión de Chrome: cargás nombre + fecha y se crea en tu Google Calendar un evento
 **de día completo, repetido todos los años**, con los recordatorios que elijas:
@@ -17,3 +17,4 @@ Si alguien cumple el 29/02, en los años que no son bisiestos el evento cae el 2
 - Funciona en Google Chrome (usa `chrome.identity`; en Brave/Edge no anda el login).
 - Los eventos se crean en tu calendario principal, marcados como "disponible" (no te bloquean la agenda).
 - El permiso pedido es solo `calendar.events` (crear/borrar eventos), no acceso a toda tu cuenta.
+- [Política de privacidad](https://smalirat.github.io/birthdays-alarms/privacy.html)

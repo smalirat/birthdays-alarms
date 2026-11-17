@@ -1,8 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "Cumpleaños → Google Calendar",
-  "version": "1.1.0",
-  "description": "Agregá un cumpleaños y se crea un evento anual en Google Calendar con sus recordatorios.",
+  "name": "Cumpleaños para Google Calendar",
+  "short_name": "Cumpleaños",
+  "version": "1.2.0",
+  "description": "Agregá cumpleaños a Google Calendar como eventos anuales con recordatorios, en dos clics.",
+  "homepage_url": "https://github.com/smalirat/birthdays-alarms",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
