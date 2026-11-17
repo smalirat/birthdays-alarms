@@ -1,0 +1,101 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1f1f1f;
+  --muted: #6b6b6b;
+  --line: #e3e3e3;
+  --accent: #1a73e8;
+  --danger: #c5221f;
+  --ok: #188038;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #202124;
+    --fg: #e8eaed;
+    --muted: #9aa0a6;
+    --line: #3c4043;
+    --accent: #8ab4f8;
+    --danger: #f28b82;
+    --ok: #81c995;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 340px;
+  margin: 0;
+  padding: 14px 16px 16px;
+  font: 13px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+h1 { font-size: 17px; margin: 0 0 12px; }
+h2 { font-size: 13px; margin: 16px 0 6px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+
+label { display: block; margin-bottom: 8px; font-weight: 500; }
+.muted { color: var(--muted); font-weight: 400; }
+
+input[type="text"], input[type="number"], select {
+  display: block;
+  width: 100%;
+  margin-top: 3px;
+  padding: 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+select option { background: var(--bg); }
+
+.row { display: flex; gap: 8px; }
+.row label { width: 64px; }
+.row label.grow { flex: 1; width: auto; }
+
+fieldset {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  margin: 4px 0 12px;
+  padding: 6px 10px 2px;
+}
+legend { padding: 0 4px; color: var(--muted); }
+label.check { font-weight: 400; display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+
+button {
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--bg);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:disabled { opacity: .6; cursor: default; }
+button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+
+#status { min-height: 18px; margin: 6px 0 0; }
+#status.ok { color: var(--ok); }
+#status.error { color: var(--danger); }
+
+ul { list-style: none; margin: 0; padding: 0; max-height: 220px; overflow-y: auto; }
+li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line);
+}
+li .info { flex: 1; min-width: 0; }
+li .who { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+li .when { color: var(--muted); font-size: 12px; }
+li .del {
+  width: auto;
+  padding: 2px 8px;
+  background: transparent;
+  color: var(--danger);
+  font-weight: 400;
+}
+li.empty { color: var(--muted); border: 0; }

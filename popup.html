@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cumpleaños</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>🎂 Cumpleaños</h1>
+
+  <form id="form" autocomplete="off">
+    <label>
+      Nombre
+      <input id="name" type="text" required maxlength="80" placeholder="Ej: Juli">
+    </label>
+
+    <div class="row">
+      <label>
+        Día
+        <input id="day" type="number" min="1" max="31" required>
+      </label>
+      <label class="grow">
+        Mes
+        <select id="month" required></select>
+      </label>
+      <label>
+        Año <span class="muted">(opc.)</span>
+        <input id="year" type="number" min="1900" max="2100" placeholder="—">
+      </label>
+    </div>
+
+    <fieldset>
+      <legend>Avisarme</legend>
+      <div id="reminders"></div>
+      <label class="check">
+        <input id="email" type="checkbox"> También por email (el día anterior)
+      </label>
+    </fieldset>
+
+    <button id="submit" type="submit">Agregar a Google Calendar</button>
+    <p id="status" role="status"></p>
+  </form>
+
+  <section>
+    <h2>Próximos</h2>
+    <button id="connect" type="button" class="secondary" hidden>Conectar con Google</button>
+    <ul id="list"></ul>
+  </section>
+
+  <script src="popup.js"></script>
+</body>
+</html>
